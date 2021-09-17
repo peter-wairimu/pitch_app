@@ -1,3 +1,10 @@
 .container{
     background-color: aquamarine;
+    background: url("/static/images/img1.jpg") no-repeat 0px 0px;
+}
+body{
+ 
+    background: url("/static/images/img1.jpg") no-repeat 0px 0px;
+    
+
 }
