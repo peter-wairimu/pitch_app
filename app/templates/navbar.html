@@ -8,17 +8,17 @@
             <span class="icon-bar"></span>
 
         </button>
-        <a href="/" class="navbar-brand">Watchlist</a>
 
     </div>
     <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav d-inline" >
             <li><a href="/">Home</a></li>
+            <li><a href="/">picthes</a></li>
+
 
         </ul>
-</div>
 
-<ul class="nav navbar-nav navbar-right">
+<ul class="nav navbar-nav navbar-right d-inline">
     {% if current_user.is_authenticated %}
     <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
     <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
@@ -26,6 +26,8 @@
     <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
     {%endif%}
   </ul>
+</div>
+
 
 
 </div>
