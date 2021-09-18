@@ -112,7 +112,7 @@ def comment_review(id):
     new_post = Comment(comment=content,title=pitch.id)
     db.session.add(new_post)
     db.session.commit()
-  post = 'Post Your Comment'
+  post = 'Add a Comment'
   user=User.query.get(id)
   comments = Comment.query.filter_by(title=pitch.id).all()
   if pitch is None:

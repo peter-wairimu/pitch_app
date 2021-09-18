@@ -10,12 +10,12 @@ class ReviewForm(FlaskForm):
 
  submit = SubmitField('Submit')
 class UpdateProfile(FlaskForm):
-    bio = TextAreaField('Tell us about you.',validators = [Required()])
+    bio = TextAreaField('Who are You?.',validators = [Required()])
     submit = SubmitField('submit')
 
 class PitchForm(FlaskForm):
-  title = StringField('Pitch title')
-  category = SelectField("Choose Category",choices=[('Gr8','Gr8'),('Products','phones'),('Production','Products')])
+  title = StringField('Pitch title',validators=[Required()])
+  category = SelectField("Choose Category",choices=[('Gr8','Gr8'),('Products','Products'),('Production','Production')])
   pitch = TextAreaField('Your Pitch',validators=[Required()])
   submit = SubmitField('Submit')
 
