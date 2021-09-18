@@ -14,7 +14,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
-    #simple mde configurations
+    
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN =True
 

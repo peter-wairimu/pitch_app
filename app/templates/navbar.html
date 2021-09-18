@@ -22,6 +22,7 @@
     {% if current_user.is_authenticated %}
     <li><a href="{{url_for('main.profile',uname=current_user.username)}}" style="font-size: 18.5px;">Profile</a></li>
     <li><a href="{{url_for('auth.logout')}}" style="font-size: 18.5px;" >Sign out</a></li>
+    <li><a  href="{{ url_for('main.new_pitch') }}">New pitch</a></li>
     {% else %}
     <li><a href="{{url_for('auth.login')}}"style="font-size: 18.5px;">Sign in</a></li>
     {%endif%}
