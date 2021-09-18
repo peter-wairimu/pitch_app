@@ -10,14 +10,14 @@
   
   <style>
     body{
-        background: url("{{ url_for('static',filename='images/img5.jpg') }}") center/cover no-repeat;}
+        background: url("{{ url_for('static',filename='images/john1.jpg') }}") center/cover no-repeat;}
     </style>
 
 <div class="container">
   <div class="row" style="color: rgb(59, 201, 46);">
     <div class="col-md-4">
         <div>
-          <h2 style="color: rgb(59, 201, 46); text-transform: capitalize;">{{post}}</h2>
+          <h2 style="color: rgb(59, 201, 46); text-transform: capitalize;">comments</h2>
         </div style="color: rgb(59, 201, 46);">
           {{ wtf.quick_form(comment_form) }}
       </div>
