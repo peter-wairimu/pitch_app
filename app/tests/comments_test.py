@@ -1,10 +1,9 @@
 import unittest
 from app.models import Role,User
-# Movie = movie.Movie
 
 class MovieTest(unittest.TestCase):
     '''
-    Test Class to test the behaviour of the Movie class
+    Test Class to test the behaviour of pitches class
     '''
 
     def setUp(self):

@@ -1,4 +1,4 @@
-from watchlist.app.models import Review, User
+from app.models import Review, User
 from app import db
 
 

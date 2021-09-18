@@ -18,7 +18,7 @@ from ..models import User,Pitch,Comment
 def index():
 
     '''
-    View movie page function that returns the movie details page and its data
+    A function that updates the pitches
 
     '''
     return render_template('index.html')
