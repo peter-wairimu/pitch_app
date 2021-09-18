@@ -6,6 +6,12 @@
   <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
 {% endblock %}
 {% block content %}
+<body>
+  
+  <style>
+    body{
+        background: url("{{ url_for('static',filename='images/img4.jpg') }}") center/cover no-repeat;}
+    </style>
   <div class="container-fluid user-pitches">
         <div class="row">
             <h2 id="p-cat" style="text-align: center"> pitches</h2>
@@ -15,7 +21,7 @@
           <div class="col-md-8">
             <div class="row pitch-section">
               <h3>GR8</h3>
-              {% for pitch in brand %}
+              {% for pitch in Gr8 %}
               <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1">
                 <h4 class="card-title">{{pitch.title}}</h4>
                 <p class="card-body">" {{pitch.pitch}}</p>
@@ -35,7 +41,7 @@
             </div>
             <div class="row">
               <h3 class="cats">Production</h3>
-              {% for pitch in project %}
+              {% for pitch in Production %}
               <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1">
                 <h4 class="card-title">{{pitch.title}}</h4>
                 <p class="card-body">" {{pitch.pitch}}</p>
@@ -49,3 +55,4 @@
         </div>
   </div>
 {% endblock %}
+</body>

@@ -9,6 +9,12 @@
 
 
 {% block content %}
+<body>
+  <style>
+    body{
+        background: url("{{ url_for('static',filename='images/img2.jpg') }}") center/cover no-repeat;}
+    </style>
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-2"></div>
@@ -21,3 +27,4 @@
       <div>
 
 {% endblock %}
+      </body>
