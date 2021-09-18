@@ -23,7 +23,7 @@
             <div class="row">
               <h3 style="text-align: center; text-transform: uppercase; color: rgb(12, 100, 93); font-style: italic;">GR8</h3>
               {% for pitch in Gr8 %}
-              <div class="card" style="background-color: rgb(204, 197, 197);">
+              <div class="card" style="background-color: rgb(243, 236, 236);">
                 <h4 class="card-title" style="text-align: center;color: rgb(12, 100, 93); font-size: 1.8rem;">{{pitch.title}}</h4>
                 <p class="card-body" style="text-align: center; color: rgb(12, 100, 93); font-size: 1.2rem;"> {{pitch.pitch}}</p>
                 <p style="text-align: center;"><a href="/comments/{{pitch.id}}"><button class="btn btn-success">Comment</button></a></p>
@@ -33,20 +33,20 @@
             <div class="row">
               <h3 style="text-align: center; text-transform: uppercase; color: rgb(47, 172, 161); font-style: italic;">Products</h3>
               {% for pitch in products %}
-              <div class="card">
+              <div class="card" style="background-color: rgb(243, 236, 236);">
                 <h4 class="card-title" style="text-align: center;color: rgb(12, 100, 93); font-size: 1.8rem;">{{pitch.title}}</h4>
                 <p class="card-body" style="text-align: center; color: rgb(12, 100, 93); font-size: 1.2rem;">{{pitch.pitch}}</p>
-                <p ><a href="/comments/{{pitch.id}}"><button class="btn btn-success">Comment</button></a></p>
+                <p style="text-align: center;"><a href="/comments/{{pitch.id}}"><button class="btn btn-success">Comment</button></a></p>
               </div>
               {% endfor %}
             </div>
             <div class="row">
               <h3 style="text-align: center; text-transform: uppercase; color: rgb(47, 172, 161); font-style: italic;">Production</h3>
               {% for pitch in Production %}
-              <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1">
-                <h4 class="card-title">{{pitch.title}}</h4>
-                <p class="card-body">" {{pitch.pitch}}</p>
-                <p class="card-footer"><a href="/comments/{{pitch.id}}"><button class="btn btn-success">Comment</button></a></p>
+              <div class="card" style="background-color: rgb(243, 236, 236);">
+                <h4 class="card-title"style="text-align: center;color: rgb(12, 100, 93); font-size: 1.8rem;">{{pitch.title}}</h4>
+                <p class="card-body" style="text-align: center; color: rgb(12, 100, 93); font-size: 1.2rem;">{{pitch.pitch}}</p>
+                <p  style="text-align: center;"><a href="/comments/{{pitch.id}}"><button class="btn btn-success">Comment</button></a></p>
               </div>
               {% endfor %}
             </div>
