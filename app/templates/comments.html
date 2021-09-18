@@ -13,22 +13,26 @@
     </style>
 
 <div class="container-fluid">
-  <div class="row comment-area">
+  <div class="row comment-area" style="color: rgb(59, 201, 46);">
     <div class="col-md-4">
         <div id="post-title">
-          <h2>{{post}}</h2>
-        </div>
+          <h2 style="color: rgb(59, 201, 46); text-transform: capitalize;">{{post}}</h2>
+        </div style="color: rgb(59, 201, 46);">
           {{ wtf.quick_form(comment_form) }}
       </div>
-      <div class="col-md-8" id="post-section">
+      <div class="container" id="post-section" style="color: rgb(59, 201, 46);">
         {% for post in comments%}
-        <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1 post-card">
-          <h4 class="card-title">{{pitch.title}}</h4>
-          <p class="card-body">" ...{{post.comment}} "</p>
-          <p class="card-footer"><b>{{user.username}}</b>'s pitch</p>
+        <div class="row">
+          <h4 class="col-9" style="color: rgb(59, 201, 46); text-transform: uppercase;">{{pitch.title}}</h4>
+          <p class="col-4" style="color: rgb(59, 201, 46);">your Comment: {{post.comment}}</p>
+          <p class="col-4" style="color: rgb(59, 201, 46);"><b>{{user.username}}</b>'s pitch</p>
         </div>
         {% endfor %}
       </div>
+      
+
+
+
   </div>
 </div>
 {% endblock %}
