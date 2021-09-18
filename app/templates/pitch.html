@@ -12,7 +12,7 @@
     body{
         background: url("{{ url_for('static',filename='images/img4.jpg') }}") center/cover no-repeat;}
     </style>
-  <div class="container-fluid user-pitches">
+  <div class="container-fluid">
         <div class="row">
             <h2 id="p-cat" style="text-align: center"> pitches</h2>
         </div>
@@ -45,7 +45,7 @@
               <div class="card peach-gradient color-block mb-3 mx-auto z-depth-1">
                 <h4 class="card-title">{{pitch.title}}</h4>
                 <p class="card-body">" {{pitch.pitch}}</p>
-                <p class="card-footer"><a href="/comments/{{pitch.id}}"><button class="btn btn-light">Comment</button></a></p>
+                <p class="card-footer"><a href="/comments/{{pitch.id}}"><button class="btn btn-success">Comment</button></a></p>
               </div>
               {% endfor %}
             </div>
