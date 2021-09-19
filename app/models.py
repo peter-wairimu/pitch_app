@@ -74,7 +74,7 @@ class Pitch(db.Model):
 class Comment(db.Model):
     
   '''
-  Comments data
+  Class to define comments
   '''
   __tablename__ = 'comments'
   id = db.Column(db.Integer,primary_key=True)

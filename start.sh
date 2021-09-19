@@ -4,4 +4,4 @@ export MAIL_PASSWORD='wairimu254'
 
 
 
- python3.9 manager.py server
+ python3.9 manage.py server

@@ -4,10 +4,10 @@ from flask_script import Manager,Server
 from flask_migrate import Migrate,MigrateCommand
 
 
-app = create_app('production')
-manager = Manager(app)
-manager.add_command('server',Server)
-@manager.command
+app = create_app('development')
+manage = Manager(app)
+manage.add_command('server',Server)
+@manage.command
 
 
 def test():
@@ -19,15 +19,15 @@ def test():
     tests = unittest.TestLoader().discover('test')
     unittest.TextTestRunner(verbosity=2).run(tests)
 
-@manager.shell
+@manage.shell
 def make_shell_context():
     return dict(app = app,db = db,User = User, Role = Role)
     
 
 
 migrate = Migrate(app,db)
-manager.add_command('db',MigrateCommand)
+manage.add_command('db',MigrateCommand)
 
 
 if __name__ == '__main__':
-    manager.run()
+    manage.run()
