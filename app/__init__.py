@@ -28,6 +28,10 @@ db = SQLAlchemy()
 photos = UploadSet('photos',IMAGES)
 def create_app(config_name):
     app = Flask(__name__)
+
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://moringa:wairimu22@localhost/pitch'
+    app.config['QLALCHEMY_TRACK_MODIFICATIONS']= False
+    db = SQLAlchemy(app)
     
     
 
