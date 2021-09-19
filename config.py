@@ -1,4 +1,5 @@
 
+import app
 import os
 
 
@@ -28,7 +29,8 @@ class Config:
 
     
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+   
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 
 
 
