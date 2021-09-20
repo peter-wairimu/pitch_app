@@ -1,10 +1,11 @@
+from flask_sqlalchemy import SQLAlchemy
 from app import create_app, db
 from app.models import User,Role
 from flask_script import Manager,Server
 from flask_migrate import Migrate,MigrateCommand
 
 
-app = create_app('production')
+app = create_app('development')
 manage = Manager(app)
 manage.add_command('server',Server)
 @manage.command
@@ -27,6 +28,7 @@ def make_shell_context():
 
 migrate = Migrate(app,db)
 manage.add_command('db',MigrateCommand)
+db = SQLAlchemy(app)
 
 
 if __name__ == '__main__':

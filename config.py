@@ -1,5 +1,4 @@
 
-from flask_sqlalchemy import SQLAlchemy
 import os
 
 
@@ -11,7 +10,8 @@ class Config:
     
 
     SECRET_KEY ='Your secret key' 
-    
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:wairimu22@localhost/pitch'
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
     

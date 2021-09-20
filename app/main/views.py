@@ -12,7 +12,7 @@ from ..models import User,Pitch,Comment
 
 
 @main.route('/')
-# @login_required
+@login_required
 def index():
 
     '''
